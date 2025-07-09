@@ -3,8 +3,6 @@ export const skills = {
     frameworks: ['React', 'Express', 'FastAPI', 'Flask'],
     backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'SQLAlchemy', 'MariaDB'],
     tools: ['Git', 'Docker', 'Replit', 'Selenium', 'Jest', 'Pytest'],
-    platforms: ['Discord API', 'OpenAI API', 'WhatsApp Business API', 'Azure'],
-    concepts: ['MVC', 'REST', 'Testing (TestClient, pytest)', 'API Integration']
 }
 
 export const experience =[
@@ -41,42 +39,56 @@ export const projects = [
     title: 'UPLB Tour Route Optimizer',
     description: 'Used QGIS and Python to solve a Traveling Salesman Problem (TSP) for optimizing tour routes around the University of the Philippines Los Baños campus.',
     tech: ['Python', 'QGIS', 'TSP'],
-    link: '#'
+    link: '',
+    source: 'https://github.com/JIhushiru/UPLB-TSP-tour',
+    screenshot: '/screenshot_tsp.png'
   },
   {
     title: 'Study Time Optimizer for UPLB Students',
     description: 'Applied the steepest descent method to analyze and improve study time efficiency for Applied Mathematics students.',
     tech: ['Python', 'Optimization', 'Steepest Descent'],
-    link: '#'
+    link: '',
+    source: '',
+    screenshot: '/screenshot_st.png',
   },
   {
     title: 'Harvesty: Agricultural E-Commerce Platform',
     description: 'Developed a full-stack farm-to-table web app connecting farmers and consumers. Includes product listings, admin tools, and order tracking.',
     tech: ['MongoDB', 'ExpressJS', 'React', 'NodeJS'],
-    link: '#'
+    link: '',
+    source: '',
+    screenshot: '/screenshot_harvesty.png',
   },
   {
     title: 'Student Organization Management System',
     description: 'Database-backed system with UI for managing student organization members, roles, payments, and generating reports.',
     tech: ['Python', 'MariaDB', 'CRUD'],
-    link: '#'
+    link: '',
+    source: 'https://github.com/JIhushiru/Student-Organization-Management-System',
+    screenshot: '/screenshot_soms.png',
   },
   {
     title: 'SmartDoc AI: Document Classifier',
     description: 'AI-powered tool using OpenAI embeddings to classify documents (PDFs, Word, images), with feedback loop and retraining capabilities.',
     tech: ['OpenAI', 'Python', 'NLP', 'Embeddings'],
-    link: '#'
+    link: 'https://smartdoc-ai-jer.vercel.app/',
+    source: 'https://github.com/JIhushiru/smartdoc-ai',
+    screenshot: '/screenshot_sdoc.png',
   },
   {
     title: 'Job Tracker: Application Organizer',
     description: 'Lightweight tool for tracking job applications, updating statuses, and visualizing progress in the job hunt.',
     tech: ['React', 'LocalStorage', 'JavaScript'],
-    link: '#'
+    link: 'https://job-tracker-api-1.onrender.com/',
+    source: 'https://github.com/JIhushiru/job-tracker-api',
+    screenshot: '/screenshot_jt.png',
   },
   {
     title: 'Geospatial ML for Banana Yield Prediction',
     description: 'Research project using six machine learning models to forecast banana yield gaps under climate scenarios. Cubist model outperformed others.',
     tech: ['Machine Learning', 'Geospatial', 'Climate Data'],
-    link: '#'
+    link: '',
+    source: '',
+    screenshot: '/screenshot_geo.png',
   }
 ];

@@ -4,6 +4,7 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Experience from "./sections/Experience"
+import Projects from "./sections/Projects";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -17,6 +18,7 @@ function App() {
       <Hero isDarkMode = {isDarkMode}/>
       <About isDarkMode= {isDarkMode} skills = {skills}/>
       <Experience isDarkMode= {isDarkMode} experience={experience}/>
+      <Projects isDarkMode={isDarkMode} projects={projects}/>
     </div>
   )
 }
