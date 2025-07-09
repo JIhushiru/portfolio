@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Experience from "./sections/Experience"
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -15,6 +16,7 @@ function App() {
       <Header isDarkMode = {isDarkMode} toggleDarkMode = {toggleDarkMode} />
       <Hero isDarkMode = {isDarkMode}/>
       <About isDarkMode= {isDarkMode} skills = {skills}/>
+      <Experience isDarkMode= {isDarkMode} experience={experience}/>
     </div>
   )
 }

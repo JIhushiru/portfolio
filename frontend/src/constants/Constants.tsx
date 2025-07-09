@@ -13,7 +13,7 @@ export const experience =[
       role: 'Advanced Tutor',
       location: 'Santiago, Santiago Metropolitan Region, Chile • Remote',
       duration: 'March 2022 - Present',
-      logo: '♾️',
+      logo: '/tutor.jpeg',
       points: [
         'Provide in-depth tutoring in programming languages including C#, C++, Java, and Python',
         'Cover core programming concepts such as syntax, logic, and object-oriented principles',
@@ -26,7 +26,7 @@ export const experience =[
       role: 'Software Engineer Intern',
       location: 'Taguig, National Capital Region, Philippines • Remote',
       duration: 'Jun 2024 - Aug 2024',
-      logo: '🧑‍💻',
+      logo: '/elinnov.png',
       points: [
         'Contributed to web application development using ASP.NET MVC and C#',
         'Implemented and managed data features using SQL and MongoDB',
