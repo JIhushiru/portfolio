@@ -1,4 +1,4 @@
-import { SiGithub, SiGmail } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
 
 type Props = {
