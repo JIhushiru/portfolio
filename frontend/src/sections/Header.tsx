@@ -11,7 +11,7 @@ export default function Header({ isDarkMode, toggleDarkMode }: Props) {
             <div className="max-w-4xl mx-auto px-6 py-4">
                 <nav className="flex justify-between items-center">
                     <div className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Jer Heseoh R. Arsolon
+                        Portfolio
                     </div>
                     <div className="flex items-center space-x-6">
                         <a href="#about" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
