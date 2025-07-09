@@ -1,4 +1,5 @@
 import { SiGithub, SiGmail } from 'react-icons/si';
+import ContactModal from '../components/ContactModal';
 
 type Props = {
   isDarkMode: boolean;
@@ -17,13 +18,7 @@ export default function ContactAndFooter({ isDarkMode }: Props) {
             Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
           </p>
           <div className="flex justify-center space-x-6">
-            <a
-              href="mailto:john@example.com"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
-            >
-              <SiGmail className="w-5 h-5 mr-2" />
-              Send Email
-            </a>
+            <ContactModal isDarkMode={isDarkMode}/>
             <a
               href="https://github.com/JihuShiru"
               className={`border ${

@@ -1,5 +1,5 @@
 import { skills, experience, projects } from "./constants/Constants";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";

@@ -1,5 +1,6 @@
 import { MapPin} from 'lucide-react';
 import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
+import ContactModal from '../components/ContactModal';
 
 type Props = {
     isDarkMode: boolean;
@@ -30,9 +31,7 @@ export default function Hero({ isDarkMode }: Props) {
                             Crafting Digital Solutions that Make a Difference
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                                Get In Touch
-                            </a>
+                            <ContactModal isDarkMode={isDarkMode}/>
                             <div className="flex space-x-3">
                                 <a href="https://github.com/JIhushiru" className={`p-3 ${isDarkMode ? 'text-white hover:text-blue-300' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>
                                     <SiGithub className="w-5 h-5"/>
