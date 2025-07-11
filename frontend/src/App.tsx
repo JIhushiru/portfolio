@@ -1,6 +1,5 @@
 import { skills, experience, projects } from "./constants/Constants";
 import { useState } from 'react';
-import { Analytics } from "@vercel/analytics/next"
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -22,7 +21,6 @@ function App() {
       <Experience isDarkMode= {isDarkMode} experience={experience}/>
       <Projects isDarkMode={isDarkMode} projects={projects}/>
       <ContactAndFooter isDarkMode={isDarkMode}/>
-      <Analytics />
     </div>
   )
 }
