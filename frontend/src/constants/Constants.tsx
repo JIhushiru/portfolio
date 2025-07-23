@@ -90,5 +90,14 @@ export const projects = [
     link: '',
     source: '',
     screenshot: '/screenshot_geo.png',
+  },
+  {
+    title: 'Predictive Maintenance for Industrial Equipment',
+    description: 'End-to-end project predicting Remaining Useful Life (RUL) of machinery using time series sensor data. Built a full-stack ML pipeline with real-time visualization, batch predictions, and risk alerts.',
+    tech: ['Time Series', 'Machine Learning', 'Streamlit', 'Scikit-learn'],
+    link: '',  
+    source: 'https://github.com/JIhushiru/predx',  
+    screenshot: '/screenshot_predx.png',
   }
+
 ];
