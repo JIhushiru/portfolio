@@ -20,6 +20,7 @@ export default function Header({ isDarkMode, toggleDarkMode, activeSection }: Pr
 
     const navLinks = [
         { href: '#about', label: 'About', id: 'about' },
+        { href: '#education', label: 'Education', id: 'education' },
         { href: '#experience', label: 'Experience', id: 'experience' },
         { href: '#projects', label: 'Projects', id: 'projects' },
         { href: '#contact', label: 'Contact', id: 'contact' },

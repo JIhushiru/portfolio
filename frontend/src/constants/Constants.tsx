@@ -6,6 +6,20 @@ export const skills = {
     tools: ['Git', 'Docker', 'Hugging Face', 'Streamlit', 'Jupyter', 'Pytest'],
 }
 
+export const education = [
+    {
+      school: 'University of the Philippines Los Baños',
+      degree: 'BS Applied Mathematics',
+      location: 'Laguna, Philippines',
+      duration: '2020 - 2025',
+      highlights: [
+        'Specialization in mathematical modeling and optimization',
+        'Research on geospatial ML for crop yield prediction',
+        'Coursework in statistics, numerical methods, and data science',
+      ],
+    },
+];
+
 export const experience =[
     {
       company: 'Tutor.com',

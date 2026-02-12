@@ -1,8 +1,9 @@
-import { skills, experience, projects } from "./constants/Constants";
+import { skills, education, experience, projects } from "./constants/Constants";
 import { useState, useEffect } from 'react';
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import Education from "./sections/Education";
 import Experience from "./sections/Experience"
 import Projects from "./sections/Projects";
 import ContactAndFooter from "./sections/ContactAndFooter";
@@ -34,6 +35,7 @@ function App() {
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
       <Hero isDarkMode={isDarkMode}/>
       <About isDarkMode={isDarkMode} skills={skills}/>
+      <Education isDarkMode={isDarkMode} education={education}/>
       <Experience isDarkMode={isDarkMode} experience={experience}/>
       <Projects isDarkMode={isDarkMode} projects={projects}/>
       <ContactAndFooter isDarkMode={isDarkMode}/>
