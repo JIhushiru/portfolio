@@ -12,9 +12,15 @@ import { useActiveSection } from "./hooks/useActiveSection";
 
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved !== null ? saved === 'true' : true;
+  });
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(prev => {
+      localStorage.setItem('darkMode', String(!prev));
+      return !prev;
+    });
   }
   const activeSection = useActiveSection();
 
