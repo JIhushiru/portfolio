@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { useState } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Project = {
   title: string;
@@ -25,6 +26,8 @@ const filters: { key: Filter; label: string }[] = [
 
 export default function Projects({ isDarkMode, projects }: Props) {
   const [activeFilter, setActiveFilter] = useState<Filter>('all');
+  const headingRef = useScrollReveal<HTMLDivElement>();
+  const gridRef = useScrollReveal<HTMLDivElement>(0.05);
 
   const filtered = projects.filter((p) => {
     if (activeFilter === 'live') return p.link && p.link.trim() !== '';
@@ -35,34 +38,34 @@ export default function Projects({ isDarkMode, projects }: Props) {
   return (
     <section id="projects" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
-          Featured Projects
-        </h2>
-        <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-2xl`}>
-          A selection of projects spanning machine learning, computer vision, and full-stack development.
-        </p>
+        <div ref={headingRef} className="reveal-up">
+          <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
+            Featured Projects
+          </h2>
+          <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-2xl`}>
+            A selection of projects spanning machine learning, computer vision, and full-stack development.
+          </p>
 
-        <div className="flex gap-2 mb-8">
-          {filters.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setActiveFilter(f.key)}
-              className={`px-4 py-1.5 text-sm font-medium rounded-lg transition-all ${
-                activeFilter === f.key
-                  ? isDarkMode
+          <div className="flex gap-2 mb-8">
+            {filters.map((f) => (
+              <button
+                key={f.key}
+                onClick={() => setActiveFilter(f.key)}
+                className={`px-4 py-1.5 text-sm font-medium rounded-lg transition-all ${
+                  activeFilter === f.key
                     ? 'bg-blue-600 text-white'
-                    : 'bg-blue-600 text-white'
-                  : isDarkMode
-                    ? 'text-gray-400 hover:text-white hover:bg-gray-800'
-                    : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
+                    : isDarkMode
+                      ? 'text-gray-400 hover:text-white hover:bg-gray-800'
+                      : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children reveal-up">
           {filtered.map((project, index) => (
             <div
               key={index}

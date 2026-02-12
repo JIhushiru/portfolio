@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
 type Props = {
     isDarkMode: boolean;
     skills: Record<string, string[]>;
@@ -12,11 +14,14 @@ const skillColors: Record<string, { dark: string; light: string }> = {
 };
 
 export default function About({ isDarkMode, skills}: Props) {
+    const leftRef = useScrollReveal<HTMLDivElement>();
+    const rightRef = useScrollReveal<HTMLDivElement>();
+
     return(
         <section id="about" className={`py-20 ${isDarkMode ? 'bg-gray-800':'bg-white'}`}>
             <div className="max-w-5xl mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-16">
-                    <div>
+                    <div ref={leftRef} className="reveal-left">
                         <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
                             About Me
                         </h2>
@@ -33,7 +38,7 @@ export default function About({ isDarkMode, skills}: Props) {
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div ref={rightRef} className="reveal-right">
                         <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
                             Skills
                         </h2>

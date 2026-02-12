@@ -1,16 +1,19 @@
 import { SiGithub } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Props = {
   isDarkMode: boolean;
 };
 
 export default function ContactAndFooter({ isDarkMode }: Props) {
+  const contactRef = useScrollReveal<HTMLDivElement>();
+
   return (
     <>
       {/* Contact Section */}
       <section id="contact" className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div ref={contactRef} className="max-w-3xl mx-auto px-6 text-center reveal-up">
           <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
             Let's Work Together
           </h2>

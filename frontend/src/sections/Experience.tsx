@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
 type Job = {
   company: string;
   role: string;
@@ -13,13 +15,16 @@ type Props = {
 }
 
 export default function Experience({ isDarkMode, experience }: Props) {
+  const headingRef = useScrollReveal<HTMLHeadingElement>();
+  const listRef = useScrollReveal<HTMLDivElement>();
+
   return (
     <section id="experience" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-12`}>
+        <h2 ref={headingRef} className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-12 reveal-up`}>
           Experience
         </h2>
-        <div className="space-y-6">
+        <div ref={listRef} className="space-y-6 reveal-up">
           {experience.map((job, index) => (
             <div
               key={index}
