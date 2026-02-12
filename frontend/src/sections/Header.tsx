@@ -4,9 +4,10 @@ import { useState } from 'react';
 type Props = {
     isDarkMode: boolean;
     toggleDarkMode: () => void;
+    activeSection: string;
 }
 
-export default function Header({ isDarkMode, toggleDarkMode }: Props) {
+export default function Header({ isDarkMode, toggleDarkMode, activeSection }: Props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -18,10 +19,10 @@ export default function Header({ isDarkMode, toggleDarkMode }: Props) {
     };
 
     const navLinks = [
-        { href: '#about', label: 'About' },
-        { href: '#experience', label: 'Experience' },
-        { href: '#projects', label: 'Projects' },
-        { href: '#contact', label: 'Contact' },
+        { href: '#about', label: 'About', id: 'about' },
+        { href: '#experience', label: 'Experience', id: 'experience' },
+        { href: '#projects', label: 'Projects', id: 'projects' },
+        { href: '#contact', label: 'Contact', id: 'contact' },
     ];
 
     return (
@@ -38,7 +39,11 @@ export default function Header({ isDarkMode, toggleDarkMode }: Props) {
                             <a
                                 key={link.href}
                                 href={link.href}
-                                className={`text-sm font-medium ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+                                className={`text-sm font-medium transition-colors ${
+                                    activeSection === link.id
+                                        ? isDarkMode ? 'text-white' : 'text-gray-900'
+                                        : isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+                                }`}
                             >
                                 {link.label}
                             </a>
@@ -77,7 +82,11 @@ export default function Header({ isDarkMode, toggleDarkMode }: Props) {
                                     key={link.href}
                                     href={link.href}
                                     onClick={closeMenu}
-                                    className={`text-sm font-medium px-3 py-2.5 rounded-lg ${isDarkMode ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'} transition-all`}
+                                    className={`text-sm font-medium px-3 py-2.5 rounded-lg transition-all ${
+                                        activeSection === link.id
+                                            ? isDarkMode ? 'text-white bg-gray-800' : 'text-gray-900 bg-gray-100'
+                                            : isDarkMode ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                                    }`}
                                 >
                                     {link.label}
                                 </a>
