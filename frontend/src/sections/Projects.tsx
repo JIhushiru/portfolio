@@ -18,7 +18,7 @@ type Props = {
 
 type Filter = 'all' | 'live' | 'source';
 
-const filters: { key: Filter; label: string }[] = [
+const filterDefs: { key: Filter; label: string }[] = [
   { key: 'all', label: 'All' },
   { key: 'live', label: 'Live Demo' },
   { key: 'source', label: 'Source Only' },
@@ -29,11 +29,19 @@ export default function Projects({ isDarkMode, projects }: Props) {
   const headingRef = useScrollReveal<HTMLDivElement>();
   const gridRef = useScrollReveal<HTMLDivElement>(0.05);
 
-  const filtered = projects.filter((p) => {
-    if (activeFilter === 'live') return p.link && p.link.trim() !== '';
-    if (activeFilter === 'source') return (!p.link || p.link.trim() === '') && p.source && p.source.trim() !== '';
+  const filterFn = (key: Filter) => (p: Project) => {
+    if (key === 'live') return p.link && p.link.trim() !== '';
+    if (key === 'source') return (!p.link || p.link.trim() === '') && p.source && p.source.trim() !== '';
     return true;
-  });
+  };
+
+  const counts: Record<Filter, number> = {
+    all: projects.length,
+    live: projects.filter(filterFn('live')).length,
+    source: projects.filter(filterFn('source')).length,
+  };
+
+  const filtered = projects.filter(filterFn(activeFilter));
 
   return (
     <section id="projects" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
@@ -47,7 +55,7 @@ export default function Projects({ isDarkMode, projects }: Props) {
           </p>
 
           <div className="flex gap-2 mb-8">
-            {filters.map((f) => (
+            {filterDefs.map((f) => (
               <button
                 key={f.key}
                 onClick={() => setActiveFilter(f.key)}
@@ -60,6 +68,9 @@ export default function Projects({ isDarkMode, projects }: Props) {
                 }`}
               >
                 {f.label}
+                <span className={`ml-1.5 text-xs ${activeFilter === f.key ? 'text-blue-200' : isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                  {counts[f.key]}
+                </span>
               </button>
             ))}
           </div>
@@ -80,6 +91,7 @@ export default function Projects({ isDarkMode, projects }: Props) {
                   <img
                     src={project.screenshot}
                     alt={project.title}
+                    loading="lazy"
                     className="h-44 w-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
                   />
                 </div>
