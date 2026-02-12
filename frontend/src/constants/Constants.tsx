@@ -104,9 +104,9 @@ export const projects = [
     title: 'JapCharQuiz: Japanese Character Quiz',
     description: 'Interactive web app for learning hiragana and katakana. Features multiple quiz modes, real-time score and streak tracking, and persistent high scores via local storage.',
     tech: ['React', 'TypeScript', 'Vite'],
-    link: 'https://jap-char-quiz.vercel.app/',
+    link: 'https://jap-char-game.vercel.app/',
     source: 'https://github.com/JIhushiru/JapCharQuiz',
-    screenshot: '',
+    screenshot: '/screenshot_jcq.png',
   },
   {
     title: 'Predictive Maintenance for Industrial Equipment',
