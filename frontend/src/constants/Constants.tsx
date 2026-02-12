@@ -96,9 +96,9 @@ export const projects = [
     title: 'Plant Disease Vision',
     description: 'Computer vision system that identifies crop diseases from leaf photos. Uses EfficientNet-B0 fine-tuned on PlantVillage dataset with CLIP-based input validation, covering 38 disease classes across 14 crops.',
     tech: ['PyTorch', 'FastAPI', 'React', 'CLIP', 'Docker'],
-    link: '',
+    link: 'https://plant-disease-vision.vercel.app/',
     source: 'https://github.com/JIhushiru/plant-disease-vision',
-    screenshot: '',
+    screenshot: '/screenshot_pdv.png',
   },
   {
     title: 'JapCharQuiz: Japanese Character Quiz',
