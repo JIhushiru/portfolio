@@ -93,6 +93,14 @@ export const projects = [
     screenshot: '/screenshot_geo.png',
   },
   {
+    title: 'JapCharQuiz: Japanese Character Quiz',
+    description: 'Interactive web app for learning hiragana and katakana. Features multiple quiz modes, real-time score and streak tracking, and persistent high scores via local storage.',
+    tech: ['React', 'TypeScript', 'Vite'],
+    link: 'https://jap-char-quiz.vercel.app/',
+    source: 'https://github.com/JIhushiru/JapCharQuiz',
+    screenshot: '',
+  },
+  {
     title: 'Predictive Maintenance for Industrial Equipment',
     description: 'End-to-end project predicting Remaining Useful Life (RUL) of machinery using time series sensor data. Built a full-stack ML pipeline with real-time visualization, batch predictions, and risk alerts.',
     tech: ['Time Series', 'Machine Learning', 'Streamlit', 'Scikit-learn'],
