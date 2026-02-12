@@ -1,3 +1,4 @@
+import { Briefcase } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Job = {
@@ -34,11 +35,15 @@ export default function Experience({ isDarkMode, experience }: Props) {
             >
               <div className="flex items-start gap-4">
                 <div
-                  className={`w-11 h-11 rounded-lg shrink-0 overflow-hidden ${
+                  className={`w-11 h-11 rounded-lg shrink-0 overflow-hidden flex items-center justify-center ${
                     isDarkMode ? 'bg-gray-700' : 'bg-gray-100'
                   }`}
                 >
-                  <img src={job.logo} alt={job.company} className="object-cover w-full h-full" />
+                  {job.logo ? (
+                    <img src={job.logo} alt={job.company} className="object-cover w-full h-full" />
+                  ) : (
+                    <Briefcase className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`} />
+                  )}
                 </div>
                 <div className="flex-1">
                   <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
