@@ -1,4 +1,4 @@
-import { MapPin} from 'lucide-react';
+import { MapPin, FileDown } from 'lucide-react';
 import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -37,8 +37,20 @@ export default function Hero({ isDarkMode }: Props) {
                         <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-xl`}>
                             Building intelligent systems that solve real-world problems.
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center gap-3">
                             <ContactModal isDarkMode={isDarkMode}/>
+                            <a
+                                href="/resume.pdf"
+                                download
+                                className={`inline-flex items-center px-5 py-2.5 rounded-lg font-medium text-sm border transition-all ${
+                                    isDarkMode
+                                        ? 'border-gray-600 text-gray-300 hover:bg-gray-800 hover:border-gray-500'
+                                        : 'border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400'
+                                }`}
+                            >
+                                <FileDown className="w-4 h-4 mr-2"/>
+                                Resume
+                            </a>
                             <div className="flex space-x-1">
                                 <a href="https://github.com/JIhushiru" className={`p-2.5 rounded-lg ${isDarkMode ? 'text-gray-400 hover:text-white hover:bg-gray-800' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100'} transition-all`}>
                                     <SiGithub className="w-5 h-5"/>
