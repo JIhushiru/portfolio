@@ -48,7 +48,7 @@ export default function Education({ isDarkMode, education }: Props) {
                       {item.school}
                     </p>
                     <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mb-4`}>
-                      {item.location} · {item.duration}
+                      {item.location}{item.duration ? ` · ${item.duration}` : ''}
                     </p>
                     <ul className="space-y-2">
                       {item.highlights.map((point, i) => (

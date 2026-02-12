@@ -1,9 +1,9 @@
 export const skills = {
-    languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'SQL'],
-    'ml / ai': ['PyTorch', 'TensorFlow', 'Scikit-learn', 'OpenCV', 'CLIP', 'Pandas', 'NumPy'],
-    frameworks: ['React', 'FastAPI', 'Flask', 'Express'],
+    languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'R', 'SQL'],
+    'ml / ai': ['PyTorch', 'TensorFlow', 'Scikit-learn', 'OpenCV', 'CLIP', 'Pandas', 'NumPy', 'SciPy'],
+    frameworks: ['React', 'Angular', 'FastAPI', 'Flask', 'Express'],
     backend: ['Node.js', 'MongoDB', 'PostgreSQL', 'MariaDB', 'Firebase'],
-    tools: ['Git', 'Docker', 'Hugging Face', 'Streamlit', 'Jupyter', 'Pytest'],
+    tools: ['Git', 'Docker', 'Kubernetes', 'GitHub Actions', 'Hugging Face', 'Streamlit', 'Jupyter', 'Pytest'],
 }
 
 export const education = [
@@ -11,8 +11,10 @@ export const education = [
       school: 'University of the Philippines Los Baños',
       degree: 'BS Applied Mathematics',
       location: 'Laguna, Philippines',
-      duration: '2020 - 2025',
+      duration: '',
       highlights: [
+        'GWA 1.76 / GPA 3.24 (US Equivalent)',
+        'University Scholar (2025), College Scholar (2023)',
         'Specialization in mathematical modeling and optimization',
         'Research on geospatial ML for crop yield prediction',
         'Coursework in statistics, numerical methods, and data science',
@@ -21,6 +23,30 @@ export const education = [
 ];
 
 export const experience =[
+    {
+      company: 'Stetho / Private Mirror',
+      role: 'Python Developer',
+      location: 'Remote',
+      duration: 'Sept 2025 - Oct 2025',
+      logo: '',
+      points: [
+        'Developed AI for Physicians, a medical AI assistant using GPT-4 and RAG pipelines',
+        'Built backend services with FastAPI and integrated vector search for clinical knowledge retrieval',
+        'Implemented document processing pipelines for medical literature and patient data',
+      ]
+    },
+    {
+      company: 'Ross Media Group',
+      role: 'Lead / Founding ML Engineer',
+      location: 'Remote',
+      duration: 'Jul 2025 - Sept 2025',
+      logo: '',
+      points: [
+        'Led development of ClipNET, an AI-powered video processing pipeline',
+        'Integrated Whisper for transcription, CLIP for visual analysis, and GPT-4 for content generation',
+        'Architected end-to-end ML infrastructure with Docker and Kubernetes for scalable deployment',
+      ]
+    },
     {
       company: 'Tutor.com',
       role: 'Advanced Tutor',
