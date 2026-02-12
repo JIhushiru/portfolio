@@ -2,6 +2,7 @@ import { MapPin, FileDown } from 'lucide-react';
 import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useTypewriter } from '../hooks/useTypewriter';
 
 type Props = {
     isDarkMode: boolean;
@@ -10,6 +11,7 @@ type Props = {
 export default function Hero({ isDarkMode }: Props) {
     const imgRef = useScrollReveal<HTMLDivElement>();
     const textRef = useScrollReveal<HTMLDivElement>();
+    const tagline = useTypewriter('Building intelligent systems that solve real-world problems.', 40, 800);
 
     return (
         <section className={`${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-24 md:py-32`}>
@@ -34,8 +36,8 @@ export default function Hero({ isDarkMode }: Props) {
                             <MapPin className="w-4 h-4 mr-2"/>
                             <span>Caloocan City, Philippines</span>
                         </div>
-                        <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-xl`}>
-                            Building intelligent systems that solve real-world problems.
+                        <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-xl h-7`}>
+                            {tagline}<span className="animate-pulse">|</span>
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-3">
                             <ContactModal isDarkMode={isDarkMode}/>
