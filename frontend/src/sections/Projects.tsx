@@ -17,53 +17,68 @@ type Props = {
 export default function Projects({ isDarkMode, projects }: Props) {
   return (
     <section id="projects" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-12`}>
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
           Featured Projects
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-12 max-w-2xl`}>
+          A selection of projects spanning machine learning, computer vision, and full-stack development.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow ${
-                isDarkMode ? 'bg-gray-800' : 'bg-white'
+              className={`group rounded-xl border overflow-hidden hover:-translate-y-1 transition-all duration-200 ${
+                isDarkMode
+                  ? 'bg-gray-800 border-gray-700/50 hover:border-gray-600'
+                  : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-md'
               }`}
             >
               {project.screenshot ? (
-                <img src={project.screenshot} alt={project.title} className="h-48 w-full object-cover" />
+                <div className="overflow-hidden">
+                  <img
+                    src={project.screenshot}
+                    alt={project.title}
+                    className="h-44 w-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+                  />
+                </div>
               ) : (
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                <div className={`h-44 flex items-center justify-center ${isDarkMode ? 'bg-gray-750 bg-linear-to-br from-gray-800 to-gray-700' : 'bg-linear-to-br from-gray-100 to-gray-200'}`}>
+                  <span className={`text-4xl ${isDarkMode ? 'text-gray-600' : 'text-gray-300'}`}>
+                    {project.title.charAt(0)}
+                  </span>
+                </div>
               )}
-              <div className="p-6">
-                <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+              <div className="p-5">
+                <h3 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                   {project.title}
                 </h3>
-                <p className={`mb-4 text-sm leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`mb-4 text-sm leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-2 py-1 text-xs rounded ${
-                        isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'
+                      className={`px-2 py-0.5 text-xs rounded-md font-medium ${
+                        isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-600'
                       }`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 pt-2 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}">
                   {project.link && project.link.trim() !== '' && (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center text-sm transition-colors ${
-                        isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'
+                      className={`inline-flex items-center text-sm font-medium transition-colors ${
+                        isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'
                       }`}
                     >
-                      View Project <ExternalLink className="w-4 h-4 ml-1" />
+                      Live Demo <ExternalLink className="w-3.5 h-3.5 ml-1" />
                     </a>
                   )}
                   {project.source && project.source.trim() !== '' && (
@@ -71,11 +86,11 @@ export default function Projects({ isDarkMode, projects }: Props) {
                       href={project.source}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center text-sm transition-colors ${
-                        isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+                      className={`inline-flex items-center text-sm font-medium transition-colors ${
+                        isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'
                       }`}
                     >
-                      Source Code <Github className="w-4 h-4 ml-1" />
+                      Source <Github className="w-3.5 h-3.5 ml-1" />
                     </a>
                   )}
                 </div>
