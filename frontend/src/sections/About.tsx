@@ -13,10 +13,10 @@ export default function About({ isDarkMode, skills}: Props) {
                         About Me
                     </h2>                       
                         <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6 leading-relaxed text-justify`}>
-                            Multidisciplinary software and data science enthusiast with hands-on experience in full-stack
-                            development, machine learning, AI, and optimization. Adept in Python , C#, Java, and modern 
-                            frameworks like React, FastAPI, and TensorFlow. Proven ability to deliver scalable solutions
-                            through academic research and real-world projects.
+                            ML/AI Engineer with hands-on experience building end-to-end machine learning pipelines,
+                            computer vision systems, and full-stack applications. Proficient in Python, PyTorch, TensorFlow,
+                            and modern frameworks like React and FastAPI. Passionate about solving real-world problems
+                            through data-driven solutions and scalable engineering.
                         </p>
                         <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6 leading-relaxed text-justify`}>
                             When I'm not coding, you'll find me playing online games like Valorant and Dota 2, jogging, and appreciating nature.

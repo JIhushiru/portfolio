@@ -1,8 +1,9 @@
 export const skills = {
-    languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C#', 'SQL'],
-    frameworks: ['React', 'Express', 'FastAPI', 'Flask'],
-    backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'SQLAlchemy', 'MariaDB'],
-    tools: ['Git', 'Docker', 'Replit', 'Selenium', 'Jest', 'Pytest'],
+    languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'SQL'],
+    'ml / ai': ['PyTorch', 'TensorFlow', 'Scikit-learn', 'OpenCV', 'CLIP', 'Pandas', 'NumPy'],
+    frameworks: ['React', 'FastAPI', 'Flask', 'Express'],
+    backend: ['Node.js', 'MongoDB', 'PostgreSQL', 'MariaDB', 'Firebase'],
+    tools: ['Git', 'Docker', 'Hugging Face', 'Streamlit', 'Jupyter', 'Pytest'],
 }
 
 export const experience =[

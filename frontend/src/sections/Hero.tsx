@@ -21,7 +21,7 @@ export default function Hero({ isDarkMode }: Props) {
                             Jer Heseoh R. Arsolon
                         </h1>
                         <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-2`}>
-                            Aspiring ML/AI/Data Engineer
+                            ML/AI Engineer
                         </p>
                         <div className={`flex items-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mb-6`}>
                             <MapPin className="w-4 h-4 mr-2"/>
