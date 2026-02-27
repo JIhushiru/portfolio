@@ -1,6 +1,7 @@
 import { MapPin, FileDown } from 'lucide-react';
 import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
+import ProfileOrbit from '../components/ProfileOrbit';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useTypewriter } from '../hooks/useTypewriter';
 
@@ -17,13 +18,8 @@ export default function Hero({ isDarkMode }: Props) {
         <section className={`${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-24 md:py-32`}>
             <div className="max-w-5xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div ref={imgRef} className="relative reveal-fade">
-                        <div className={`absolute -inset-1 rounded-full ${isDarkMode ? 'bg-blue-500/20' : 'bg-blue-500/10'} blur-md`}></div>
-                        <img
-                            src="/me.png"
-                            alt="Jer Heseoh Arsolon"
-                            className={`relative w-48 h-48 rounded-full object-cover border-2 ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} shadow-lg`}
-                        />
+                    <div ref={imgRef} className="reveal-fade">
+                        <ProfileOrbit isDarkMode={isDarkMode} />
                     </div>
                     <div ref={textRef} className="flex-1 text-center md:text-left reveal-up">
                         <h1 className={`text-4xl md:text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3 tracking-tight`}>
