@@ -20,7 +20,7 @@ export default function Hero({ isDarkMode }: Props) {
                     <div ref={imgRef} className="relative reveal-fade">
                         <div className={`absolute -inset-1 rounded-full ${isDarkMode ? 'bg-blue-500/20' : 'bg-blue-500/10'} blur-md`}></div>
                         <img
-                            src="/me.jpeg"
+                            src="/me.png"
                             alt="Jer Heseoh Arsolon"
                             className={`relative w-48 h-48 rounded-full object-cover border-2 ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} shadow-lg`}
                         />
