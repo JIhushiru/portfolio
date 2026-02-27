@@ -117,6 +117,14 @@ export const projects = [
     source: 'https://github.com/JIhushiru/job-tracker-api',
     screenshot: '/screenshot_jt.png',
   },
+  {
+    title: 'Geospatial Machine Learning for Predicting Banana Yield in the Philippines Under Climate Uncertainty',
+    description: 'Research project using six machine learning models to forecast banana yield gaps under climate scenarios. Cubist model outperformed others.',
+    tech: ['Machine Learning', 'Geospatial', 'Climate Data'],
+    link: 'https://amat-sp.vercel.app/',
+    source: 'https://github.com/JIhushiru/AMAT-sp',
+    screenshot: '/screenshot_geo.png',
+  },
   // Source-only projects
   {
     title: 'Predictive Maintenance for Industrial Equipment',
@@ -141,14 +149,6 @@ export const projects = [
     link: '',
     source: 'https://github.com/JIhushiru/Student-Organization-Management-System',
     screenshot: '/screenshot_soms.png',
-  },
-  {
-    title: 'Geospatial Machine Learning for Predicting Banana Yield in the Philippines Under Climate Uncertainty',
-    description: 'Research project using six machine learning models to forecast banana yield gaps under climate scenarios. Cubist model outperformed others.',
-    tech: ['Machine Learning', 'Geospatial', 'Climate Data'],
-    link: 'https://amat-sp.vercel.app/',
-    source: 'https://github.com/JIhushiru/AMAT-sp',
-    screenshot: '/screenshot_geo.png',
   },
   {
     title: 'Harvesty: Agricultural E-Commerce Platform',
