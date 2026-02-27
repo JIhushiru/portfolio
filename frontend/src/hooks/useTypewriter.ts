@@ -20,5 +20,6 @@ export function useTypewriter(text: string, speed = 50, startDelay = 600) {
     return () => clearTimeout(timeout);
   }, [displayed, text, speed, started]);
 
-  return displayed;
+  const done = displayed.length >= text.length;
+  return { displayed, done };
 }
