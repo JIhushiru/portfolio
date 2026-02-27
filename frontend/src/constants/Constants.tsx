@@ -143,11 +143,11 @@ export const projects = [
     screenshot: '/screenshot_soms.png',
   },
   {
-    title: 'Geospatial ML for Banana Yield Prediction',
+    title: 'Geospatial Machine Learning for Predicting Banana Yield in the Philippines Under Climate Uncertainty',
     description: 'Research project using six machine learning models to forecast banana yield gaps under climate scenarios. Cubist model outperformed others.',
     tech: ['Machine Learning', 'Geospatial', 'Climate Data'],
-    link: '',
-    source: '',
+    link: 'https://amat-sp.vercel.app/',
+    source: 'https://github.com/JIhushiru/AMAT-sp',
     screenshot: '/screenshot_geo.png',
   },
   {
