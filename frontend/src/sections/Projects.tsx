@@ -9,6 +9,7 @@ type Project = {
   link?: string;
   source?: string;
   screenshot?: string;
+  noZoom?: boolean;
 };
 
 type Props = {
@@ -92,7 +93,7 @@ export default function Projects({ isDarkMode, projects }: Props) {
                     src={project.screenshot}
                     alt={project.title}
                     loading="lazy"
-                    className="h-44 w-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+                    className={`h-44 w-full object-cover transition-transform duration-200${project.noZoom ? '' : ' group-hover:scale-[1.02]'}`}
                   />
                 </div>
               ) : (

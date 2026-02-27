@@ -116,6 +116,7 @@ export const projects = [
     link: 'https://job-tracker-api-5v85.vercel.app/',
     source: 'https://github.com/JIhushiru/job-tracker-api',
     screenshot: '/screenshot_jt.png',
+    noZoom: true,
   },
   {
     title: 'Geospatial Machine Learning for Predicting Banana Yield in the Philippines Under Climate Uncertainty',
