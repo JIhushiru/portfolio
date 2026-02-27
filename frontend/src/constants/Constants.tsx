@@ -126,6 +126,14 @@ export const projects = [
     source: 'https://github.com/JIhushiru/AMAT-sp',
     screenshot: '/screenshot_geo.png',
   },
+  {
+    title: 'UPLB Tour Route Optimizer',
+    description: 'Used QGIS and Python to solve a Traveling Salesman Problem (TSP) for optimizing tour routes around the University of the Philippines Los Baños campus.',
+    tech: ['Python', 'QGIS', 'TSP'],
+    link: 'https://uplb-tsp-tour.vercel.app/',
+    source: 'https://github.com/JIhushiru/UPLB-TSP-tour',
+    screenshot: '/screenshot_tsp.png',
+  },
   // Source-only projects
   {
     title: 'Predictive Maintenance for Industrial Equipment',
@@ -134,14 +142,6 @@ export const projects = [
     link: '',
     source: 'https://github.com/JIhushiru/predx',
     screenshot: '/screenshot_predx.png',
-  },
-  {
-    title: 'UPLB Tour Route Optimizer',
-    description: 'Used QGIS and Python to solve a Traveling Salesman Problem (TSP) for optimizing tour routes around the University of the Philippines Los Baños campus.',
-    tech: ['Python', 'QGIS', 'TSP'],
-    link: '',
-    source: 'https://github.com/JIhushiru/UPLB-TSP-tour',
-    screenshot: '/screenshot_tsp.png',
   },
   {
     title: 'Student Organization Management System',
