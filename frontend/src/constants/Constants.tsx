@@ -78,6 +78,14 @@ export const experience =[
 export const projects = [
   // Live demo projects first
   {
+    title: 'AI Career Transition Planner',
+    description: 'Hybrid AI meta-model that analyzes resumes, recommends career paths across 185 roles using Dijkstra-based pathfinding, and generates personalized learning roadmaps with skill gap analysis.',
+    tech: ['Next.js', 'FastAPI', 'Gemini', 'SpaCy', 'Docker'],
+    link: 'https://ai-career-transition-planner.vercel.app',
+    source: 'https://github.com/JIhushiru/ai-career-transition-planner',
+    screenshot: '/ai-career-transition-planner.png',
+  },
+  {
     title: 'Plant Disease Vision',
     description: 'Computer vision system that identifies crop diseases from leaf photos. Uses EfficientNet-B0 fine-tuned on PlantVillage dataset with CLIP-based input validation, covering 38 disease classes across 14 crops.',
     tech: ['PyTorch', 'FastAPI', 'React', 'CLIP', 'Docker'],
@@ -105,7 +113,7 @@ export const projects = [
     title: 'Job Tracker: Application Organizer',
     description: 'Lightweight tool for tracking job applications, updating statuses, and visualizing progress in the job hunt.',
     tech: ['React', 'LocalStorage', 'JavaScript'],
-    link: 'https://job-tracker-api-1.onrender.com/',
+    link: 'https://job-tracker-api-5v85.vercel.app/',
     source: 'https://github.com/JIhushiru/job-tracker-api',
     screenshot: '/screenshot_jt.png',
   },
