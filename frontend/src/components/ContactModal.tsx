@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import emailjs from '@emailjs/browser';
 
 type Props = {
@@ -60,10 +61,10 @@ export default function ContactModal({ isDarkMode }: Props) {
         Get In Touch
       </button>
 
-      {isOpen && (
+      {isOpen && createPortal(
         <div
           onClick={handleClickOutside}
-          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/60"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
         >
           <div
             ref={modalRef}
@@ -131,7 +132,8 @@ export default function ContactModal({ isDarkMode }: Props) {
               </div>
             </form>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
