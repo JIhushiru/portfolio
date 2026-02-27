@@ -11,11 +11,11 @@ export default function ProfileOrbit({ isDarkMode }: Props) {
             {/* Inner glow ring */}
             <div className={`absolute w-52 h-52 rounded-full border ${isDarkMode ? 'border-blue-400/20' : 'border-blue-500/15'} animate-[pulse_2.5s_ease-in-out_infinite]`} />
 
-            {/* Profile image with breathe */}
+            {/* Profile image */}
             <img
                 src="/me.png"
                 alt="Jer Heseoh Arsolon"
-                className="relative w-48 h-48 rounded-full object-cover animate-[breathe_3s_ease-in-out_infinite]"
+                className="relative w-48 h-48 rounded-full object-cover"
             />
 
             {/* Orbiting dot accents */}
