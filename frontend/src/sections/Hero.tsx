@@ -1,6 +1,7 @@
 import { MapPin, FileDown } from 'lucide-react';
 import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
 import ContactModal from '../components/ContactModal';
+import NeuralBackground from '../components/NeuralBackground';
 import ProfileOrbit from '../components/ProfileOrbit';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useTypewriter } from '../hooks/useTypewriter';
@@ -15,8 +16,9 @@ export default function Hero({ isDarkMode }: Props) {
     const { displayed: tagline, done: taglineDone } = useTypewriter('Building intelligent systems that solve real-world problems.', 40, 800);
 
     return (
-        <section className={`${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-24 md:py-32`}>
-            <div className="max-w-5xl mx-auto px-6">
+        <section className={`relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} py-24 md:py-32`}>
+            <NeuralBackground isDarkMode={isDarkMode} />
+            <div className="relative max-w-5xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center gap-12">
                     <div ref={imgRef} className="reveal-fade">
                         <ProfileOrbit isDarkMode={isDarkMode} />

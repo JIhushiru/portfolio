@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { useState } from 'react';
+import NeuralBackground from '../components/NeuralBackground';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Project = {
@@ -45,8 +46,9 @@ export default function Projects({ isDarkMode, projects }: Props) {
   const filtered = projects.filter(filterFn(activeFilter));
 
   return (
-    <section id="projects" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className={`relative overflow-hidden py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+      <NeuralBackground isDarkMode={isDarkMode} />
+      <div className="relative max-w-6xl mx-auto px-6">
         <div ref={headingRef} className="reveal-up">
           <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-4`}>
             Featured Projects

@@ -23,7 +23,6 @@ export default function Header({ isDarkMode, toggleDarkMode, activeSection }: Pr
         { href: '#education', label: 'Education', id: 'education' },
         { href: '#experience', label: 'Experience', id: 'experience' },
         { href: '#projects', label: 'Projects', id: 'projects' },
-        { href: '#contact', label: 'Contact', id: 'contact' },
     ];
 
     return (

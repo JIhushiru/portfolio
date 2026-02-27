@@ -1,3 +1,4 @@
+import NeuralBackground from '../components/NeuralBackground';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Props = {
@@ -18,8 +19,9 @@ export default function About({ isDarkMode, skills}: Props) {
     const rightRef = useScrollReveal<HTMLDivElement>();
 
     return(
-        <section id="about" className={`py-20 ${isDarkMode ? 'bg-gray-800':'bg-white'}`}>
-            <div className="max-w-5xl mx-auto px-6">
+        <section id="about" className={`relative overflow-hidden py-20 ${isDarkMode ? 'bg-gray-800':'bg-white'}`}>
+            <NeuralBackground isDarkMode={isDarkMode} />
+            <div className="relative max-w-5xl mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-16">
                     <div ref={leftRef} className="reveal-left">
                         <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>

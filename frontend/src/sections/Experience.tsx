@@ -1,4 +1,5 @@
 import { Briefcase } from 'lucide-react';
+import NeuralBackground from '../components/NeuralBackground';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type Job = {
@@ -20,8 +21,9 @@ export default function Experience({ isDarkMode, experience }: Props) {
   const listRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="experience" className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="experience" className={`relative overflow-hidden py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+      <NeuralBackground isDarkMode={isDarkMode} />
+      <div className="relative max-w-5xl mx-auto px-6">
         <h2 ref={headingRef} className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-12 reveal-up`}>
           Experience
         </h2>

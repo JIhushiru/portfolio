@@ -1,4 +1,5 @@
 import { GraduationCap } from 'lucide-react';
+import NeuralBackground from '../components/NeuralBackground';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 type EducationItem = {
@@ -18,8 +19,9 @@ export default function Education({ isDarkMode, education }: Props) {
   const sectionRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="education" className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="education" className={`relative overflow-hidden py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+      <NeuralBackground isDarkMode={isDarkMode} />
+      <div className="relative max-w-5xl mx-auto px-6">
         <div ref={sectionRef} className="reveal-up">
           <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-12`}>
             Education
