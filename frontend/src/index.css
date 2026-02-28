@@ -114,3 +114,22 @@ body {
 .chat-markdown h1 { font-size: 1.1em; }
 .chat-markdown h2 { font-size: 1.05em; }
 .chat-markdown h3 { font-size: 1em; }
+
+/* Chat scrollbar */
+.chat-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(59 130 246 / 0.5);
+  border-radius: 3px;
+}
+.chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(59 130 246 / 0.8);
+}
+.chat-scrollbar {
+  scrollbar-color: rgb(59 130 246 / 0.5) transparent;
+  scrollbar-width: thin;
+}

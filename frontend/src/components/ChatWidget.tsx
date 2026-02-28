@@ -129,7 +129,7 @@ export default function ChatWidget({ isDarkMode }: Props) {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 chat-scrollbar">
             {/* Welcome message */}
             <div className="flex gap-2 items-start">
               <div className="shrink-0 w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center">
