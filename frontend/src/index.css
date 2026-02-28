@@ -76,3 +76,41 @@ body {
 .stagger-children > *:nth-child(8) { transition-delay: 560ms; }
 .stagger-children > *:nth-child(9) { transition-delay: 640ms; }
 .stagger-children > *:nth-child(10) { transition-delay: 720ms; }
+
+/* Chat markdown styles */
+.chat-markdown p {
+  margin: 0;
+}
+.chat-markdown p + p {
+  margin-top: 0.5rem;
+}
+.chat-markdown strong {
+  font-weight: 600;
+}
+.chat-markdown ul,
+.chat-markdown ol {
+  margin: 0.25rem 0;
+  padding-left: 1.25rem;
+}
+.chat-markdown li {
+  margin: 0.125rem 0;
+}
+.chat-markdown code {
+  font-size: 0.8em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background-color: rgb(0 0 0 / 0.1);
+}
+.chat-markdown a {
+  color: rgb(96 165 250);
+  text-decoration: underline;
+}
+.chat-markdown h1,
+.chat-markdown h2,
+.chat-markdown h3 {
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem;
+}
+.chat-markdown h1 { font-size: 1.1em; }
+.chat-markdown h2 { font-size: 1.05em; }
+.chat-markdown h3 { font-size: 1em; }

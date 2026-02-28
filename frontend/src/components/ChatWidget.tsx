@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { MessageCircle, Send, X, Bot } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { useChat } from '../hooks/useChat';
 
 type Props = {
@@ -159,13 +160,13 @@ export default function ChatWidget({ isDarkMode }: Props) {
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div
-                    className={`rounded-lg px-3 py-2 text-sm max-w-[85%] whitespace-pre-wrap ${
+                    className={`rounded-lg px-3 py-2 text-sm max-w-[85%] chat-markdown ${
                       isDarkMode
                         ? 'bg-gray-700 text-gray-200'
                         : 'bg-gray-100 text-gray-800'
                     }`}
                   >
-                    {msg.content}
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
                   </div>
                 </div>
               )
@@ -178,13 +179,13 @@ export default function ChatWidget({ isDarkMode }: Props) {
                   <Bot className="w-4 h-4 text-white" />
                 </div>
                 <div
-                  className={`rounded-lg px-3 py-2 text-sm max-w-[85%] whitespace-pre-wrap ${
+                  className={`rounded-lg px-3 py-2 text-sm max-w-[85%] chat-markdown ${
                     isDarkMode
                       ? 'bg-gray-700 text-gray-200'
                       : 'bg-gray-100 text-gray-800'
                   }`}
                 >
-                  {streamingContent}
+                  <ReactMarkdown>{streamingContent}</ReactMarkdown>
                   <span className="inline-block w-[2px] h-4 ml-0.5 align-middle animate-pulse bg-current" />
                 </div>
               </div>
