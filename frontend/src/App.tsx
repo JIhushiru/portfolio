@@ -8,6 +8,7 @@ import Experience from "./sections/Experience"
 import Projects from "./sections/Projects";
 import ContactAndFooter from "./sections/ContactAndFooter";
 import BackToTop from "./components/BackToTop";
+import ChatWidget from "./components/ChatWidget";
 import ReactGA from "react-ga4";
 import { useActiveSection } from "./hooks/useActiveSection";
 
@@ -39,6 +40,7 @@ function App() {
       <Experience isDarkMode={isDarkMode} experience={experience}/>
       <Projects isDarkMode={isDarkMode} projects={projects}/>
       <ContactAndFooter isDarkMode={isDarkMode}/>
+      <ChatWidget isDarkMode={isDarkMode}/>
       <BackToTop isDarkMode={isDarkMode}/>
     </div>
   )
