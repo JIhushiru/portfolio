@@ -137,7 +137,7 @@ export const projects = [
   {
     title: 'ReviewNotes: Private Knowledge Base',
     description: 'Personal knowledge management platform for organizing and reviewing study notes. Covers system design, machine learning, security, and more with a clean dark-mode interface.',
-    tech: ['Next.js', 'React', 'TypeScript'],
+    tech: ['Next.js', 'React', 'TypeScript', 'Firebase'],
     link: 'https://review-notes-jhra.vercel.app/',
     source: 'https://github.com/JIhushiru/review',
     screenshot: '/screenshot_review.png',
