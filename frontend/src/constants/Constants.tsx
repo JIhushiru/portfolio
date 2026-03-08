@@ -134,6 +134,14 @@ export const projects = [
     source: 'https://github.com/JIhushiru/UPLB-TSP-tour',
     screenshot: '/screenshot_tsp.png',
   },
+  {
+    title: 'ReviewNotes: Private Knowledge Base',
+    description: 'Personal knowledge management platform for organizing and reviewing study notes. Covers system design, machine learning, security, and more with a clean dark-mode interface.',
+    tech: ['Next.js', 'React', 'TypeScript'],
+    link: 'https://review-notes-jhra.vercel.app/',
+    source: 'https://github.com/JIhushiru/review',
+    screenshot: '/screenshot_review.png',
+  },
   // Source-only projects
   {
     title: 'Predictive Maintenance for Industrial Equipment',
