@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 export function useTypewriter(text: string, speed = 50, startDelay = 600) {
-  const [displayed, setDisplayed] = useState('');
+  const [displayed, setDisplayed] = useState(() => (prefersReducedMotion() ? text : ''));
   const [started, setStarted] = useState(false);
 
   useEffect(() => {

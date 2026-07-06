@@ -31,14 +31,21 @@ function App() {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
+  // Expose the theme to plain CSS (portaled components render outside this div)
+  useEffect(() => {
+    document.documentElement.classList.toggle('theme-dark', isDarkMode);
+  }, [isDarkMode]);
+
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+    <div className={`min-h-screen antialiased ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} activeSection={activeSection} />
-      <Hero isDarkMode={isDarkMode}/>
-      <About isDarkMode={isDarkMode} skills={skills}/>
-      <Education isDarkMode={isDarkMode} education={education}/>
-      <Experience isDarkMode={isDarkMode} experience={experience}/>
-      <Projects isDarkMode={isDarkMode} projects={projects}/>
+      <main>
+        <Hero isDarkMode={isDarkMode}/>
+        <About isDarkMode={isDarkMode} skills={skills}/>
+        <Education isDarkMode={isDarkMode} education={education}/>
+        <Experience isDarkMode={isDarkMode} experience={experience}/>
+        <Projects isDarkMode={isDarkMode} projects={projects}/>
+      </main>
       <ContactAndFooter isDarkMode={isDarkMode}/>
       <ChatWidget isDarkMode={isDarkMode}/>
       <BackToTop isDarkMode={isDarkMode}/>

@@ -68,23 +68,21 @@ export default function ChatWidget({ isDarkMode }: Props) {
       <button
         onClick={handleToggle}
         aria-label={isOpen ? 'Close chat' : 'Open chat'}
-        className={`fixed bottom-20 right-6 p-3.5 rounded-full shadow-lg z-40 transition-all duration-300 ${
-          isOpen
-            ? 'rotate-0'
-            : 'rotate-0'
+        className={`fixed bottom-20 right-6 p-3.5 rounded-full shadow-lg shadow-blue-600/30 z-40 transition-all duration-300 active:scale-95 ${
+          isOpen ? 'rotate-90' : 'rotate-0'
         } ${
           isDarkMode
             ? 'bg-blue-600 text-white hover:bg-blue-500'
             : 'bg-blue-600 text-white hover:bg-blue-700'
         }`}
       >
-        {isOpen ? <X className="w-5 h-5" /> : <MessageCircle className="w-5 h-5" />}
+        {isOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <MessageCircle className="w-5 h-5" aria-hidden="true" />}
       </button>
 
       {/* Chat Panel */}
       {isOpen && createPortal(
         <div
-          className={`fixed bottom-36 right-6 w-[calc(100vw-3rem)] sm:w-[360px] h-[500px] rounded-xl shadow-2xl border flex flex-col overflow-hidden z-50 transition-all duration-300 ${
+          className={`fixed bottom-36 right-6 w-[calc(100vw-3rem)] sm:w-[360px] h-[500px] rounded-xl shadow-2xl border flex flex-col overflow-hidden z-50 origin-bottom-right animate-[pop-in_0.25s_ease-out] ${
             isDarkMode
               ? 'bg-gray-800 border-gray-700'
               : 'bg-white border-gray-200'
@@ -117,13 +115,14 @@ export default function ChatWidget({ isDarkMode }: Props) {
               )}
               <button
                 onClick={handleClose}
+                aria-label="Close chat"
                 className={`p-1 rounded transition-colors ${
                   isDarkMode
                     ? 'text-gray-400 hover:text-gray-200 hover:bg-gray-700'
                     : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
                 }`}
               >
-                <X className="w-4 h-4" />
+                <X className="w-4 h-4" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -237,9 +236,10 @@ export default function ChatWidget({ isDarkMode }: Props) {
               <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
-                className="p-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0"
+                aria-label="Send message"
+                className="p-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all shrink-0"
               >
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4" aria-hidden="true" />
               </button>
             </div>
           </div>

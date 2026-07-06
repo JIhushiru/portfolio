@@ -19,16 +19,16 @@ export default function About({ isDarkMode, skills}: Props) {
     const rightRef = useScrollReveal<HTMLDivElement>();
 
     return(
-        <section id="about" className={`relative overflow-hidden py-20 ${isDarkMode ? 'bg-gray-800':'bg-white'}`}>
+        <section id="about" className={`relative overflow-hidden py-20 md:py-28 ${isDarkMode ? 'bg-gray-800':'bg-white'}`}>
             <NeuralBackground isDarkMode={isDarkMode} />
             <div className="relative max-w-5xl mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-16">
                     <div ref={leftRef} className="reveal-left">
-                        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
+                        <h2 className={`text-3xl font-bold tracking-tight ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
                             About Me
                         </h2>
                         <div className={`w-12 h-1 rounded-full mb-8 ${isDarkMode ? 'bg-blue-500' : 'bg-blue-600'}`}></div>
-                        <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6 leading-relaxed`}>
+                        <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6 leading-relaxed text-pretty`}>
                             ML/AI Engineer with hands-on experience building end-to-end machine learning pipelines,
                             computer vision systems, and full-stack applications. Proficient in Python, PyTorch, TensorFlow,
                             and modern frameworks like React and FastAPI. Passionate about solving real-world problems
@@ -41,7 +41,7 @@ export default function About({ isDarkMode, skills}: Props) {
                         </div>
                     </div>
                     <div ref={rightRef} className="reveal-right">
-                        <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
+                        <h2 className={`text-3xl font-bold tracking-tight ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-1`}>
                             Skills
                         </h2>
                         <div className={`w-12 h-1 rounded-full mb-8 ${isDarkMode ? 'bg-blue-500' : 'bg-blue-600'}`}></div>
@@ -50,9 +50,9 @@ export default function About({ isDarkMode, skills}: Props) {
                                 const colors = skillColors[category] || skillColors.tools;
                                 return (
                                     <div key={category}>
-                                        <h4 className={`text-xs font-semibold uppercase tracking-wider ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mb-2.5`}>
+                                        <h3 className={`text-xs font-semibold uppercase tracking-wider ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} mb-2.5`}>
                                             {category}
-                                        </h4>
+                                        </h3>
                                         <div className="flex flex-wrap gap-2">
                                             {items.map(skill => (
                                                 <span
