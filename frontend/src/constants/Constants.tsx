@@ -144,6 +144,14 @@ export const projects = [
   },
   // Source-only projects
   {
+    title: 'DispatchPilot: AI Operations Intelligence for Last-Mile Delivery',
+    description: 'Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates — backed by a gradient-boosting model predicting late-delivery risk in real time (ROC-AUC 0.92) through a FastAPI + Next.js dashboard.',
+    tech: ['Next.js', 'FastAPI', 'Anthropic Claude', 'Scikit-learn', 'WebSockets', 'Docker'],
+    link: '',
+    source: 'https://github.com/JIhushiru/dispatchpilot',
+    screenshots: ['/screenshot_dp_dashboard.png', '/screenshot_dp_copilot.png', '/screenshot_dp_calibration.png'],
+  },
+  {
     title: 'Predictive Maintenance for Industrial Equipment',
     description: 'End-to-end project predicting Remaining Useful Life (RUL) of machinery using time series sensor data. Built a full-stack ML pipeline with real-time visualization, batch predictions, and risk alerts.',
     tech: ['Time Series', 'Machine Learning', 'Streamlit', 'Scikit-learn'],

@@ -55,13 +55,17 @@ const SYSTEM_PROMPT = `You are a helpful assistant on Jer Heseoh R. Arsolon's po
 
 7. UPLB Tour Route Optimizer – TSP solver for campus tour routes using QGIS and Python. (Python, QGIS, TSP) [Live: https://uplb-tsp-tour.vercel.app]
 
-8. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
+8. ReviewNotes – Private knowledge base for organizing and reviewing study notes covering system design, ML, security, and more. (Next.js, React, TypeScript, Firebase) [Live: https://review-notes-jhra.vercel.app]
 
-9. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
+9. DispatchPilot – AI operations-intelligence platform for last-mile delivery. Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates, backed by a gradient-boosting model predicting late-delivery risk in real time (ROC-AUC 0.92) through a FastAPI + Next.js dashboard. (Next.js, FastAPI, Anthropic Claude, Scikit-learn, WebSockets, Docker) [Source: https://github.com/JIhushiru/dispatchpilot]
 
-10. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+10. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
 
-11. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
+11. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
+
+12. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+
+13. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
 
 ## Personal
 - Hobbies: Playing Valorant and Dota 2, jogging, appreciating nature

@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Github, Images } from 'lucide-react';
 import { useState } from 'react';
 import NeuralBackground from '../components/NeuralBackground';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -10,6 +10,7 @@ type Project = {
   link?: string;
   source?: string;
   screenshot?: string;
+  screenshots?: string[];
   noZoom?: boolean;
 };
 
@@ -25,6 +26,88 @@ const filterDefs: { key: Filter; label: string }[] = [
   { key: 'live', label: 'Live Demo' },
   { key: 'source', label: 'Source Only' },
 ];
+
+function CardImage({ project, isDarkMode }: { project: Project; isDarkMode: boolean }) {
+  const images = project.screenshots?.length
+    ? project.screenshots
+    : project.screenshot
+      ? [project.screenshot]
+      : [];
+  const [index, setIndex] = useState(0);
+
+  if (images.length === 0) {
+    return (
+      <div className={`h-44 flex items-center justify-center ${isDarkMode ? 'bg-linear-to-br from-gray-800 to-gray-700' : 'bg-linear-to-br from-gray-100 to-gray-200'}`}>
+        <span className={`text-4xl ${isDarkMode ? 'text-gray-600' : 'text-gray-300'}`}>
+          {project.title.charAt(0)}
+        </span>
+      </div>
+    );
+  }
+
+  if (images.length === 1) {
+    return (
+      <div className="overflow-hidden">
+        <img
+          src={images[0]}
+          alt={`${project.title} screenshot`}
+          loading="lazy"
+          className={`h-44 w-full object-cover transition-transform duration-200${project.noZoom ? '' : ' group-hover:scale-[1.02]'}`}
+        />
+      </div>
+    );
+  }
+
+  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
+  const next = () => setIndex((i) => (i + 1) % images.length);
+
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className="flex transition-transform duration-300 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {images.map((src, i) => (
+          <div key={src} className="w-full shrink-0 overflow-hidden">
+            <img
+              src={src}
+              alt={`${project.title} screenshot ${i + 1} of ${images.length}`}
+              loading="lazy"
+              className={`h-44 w-full object-cover transition-transform duration-200${project.noZoom ? '' : ' group-hover:scale-[1.02]'}`}
+            />
+          </div>
+        ))}
+      </div>
+
+      <span role="status" className="sr-only">{`Screenshot ${index + 1} of ${images.length}`}</span>
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-2 right-2 flex items-center gap-1 rounded-md bg-gray-900/60 px-1.5 py-0.5 text-[11px] font-medium text-white backdrop-blur-sm"
+      >
+        <Images className="w-3 h-3" />
+        {index + 1}/{images.length}
+      </div>
+
+      <button
+        type="button"
+        onClick={prev}
+        aria-label={`Previous ${project.title} screenshot`}
+        className="absolute left-1.5 top-1/2 -translate-y-1/2 rounded-full p-1.5 bg-gray-900/60 text-white backdrop-blur-sm transition-all hover:bg-gray-900/85 active:scale-95 [@media(hover:hover)]:opacity-60 group-hover:opacity-100 focus-visible:opacity-100"
+      >
+        <ChevronLeft className="w-4 h-4" aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        onClick={next}
+        aria-label={`Next ${project.title} screenshot`}
+        className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full p-1.5 bg-gray-900/60 text-white backdrop-blur-sm transition-all hover:bg-gray-900/85 active:scale-95 [@media(hover:hover)]:opacity-60 group-hover:opacity-100 focus-visible:opacity-100"
+      >
+        <ChevronRight className="w-4 h-4" aria-hidden="true" />
+      </button>
+    </div>
+  );
+}
 
 export default function Projects({ isDarkMode, projects }: Props) {
   const [activeFilter, setActiveFilter] = useState<Filter>('all');
@@ -90,22 +173,7 @@ export default function Projects({ isDarkMode, projects }: Props) {
                     : 'bg-white border-gray-200 shadow-sm hover:border-blue-300/60 hover:shadow-md hover:shadow-blue-600/5'
                 }`}
               >
-                {project.screenshot ? (
-                  <div className="overflow-hidden">
-                    <img
-                      src={project.screenshot}
-                      alt={`${project.title} screenshot`}
-                      loading="lazy"
-                      className={`h-44 w-full object-cover transition-transform duration-200${project.noZoom ? '' : ' group-hover:scale-[1.02]'}`}
-                    />
-                  </div>
-                ) : (
-                  <div className={`h-44 flex items-center justify-center ${isDarkMode ? 'bg-linear-to-br from-gray-800 to-gray-700' : 'bg-linear-to-br from-gray-100 to-gray-200'}`}>
-                    <span className={`text-4xl ${isDarkMode ? 'text-gray-600' : 'text-gray-300'}`}>
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
-                )}
+                <CardImage project={project} isDarkMode={isDarkMode} />
                 <div className="p-5 flex-1 flex flex-col">
                   <h3 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                     {project.title}
