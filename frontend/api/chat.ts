@@ -59,13 +59,15 @@ const SYSTEM_PROMPT = `You are a helpful assistant on Jer Heseoh R. Arsolon's po
 
 9. DispatchPilot – AI operations-intelligence platform for last-mile delivery. Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates, backed by a gradient-boosting model predicting late-delivery risk in real time (ROC-AUC 0.92) through a FastAPI + Next.js dashboard. (Next.js, FastAPI, Anthropic Claude, Scikit-learn, WebSockets, Docker) [Source: https://github.com/JIhushiru/dispatchpilot]
 
-10. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
+10. Anneal Routes – Interactive vehicle-routing optimizer (CVRPTW) for Philippine delivery networks. From-scratch simulated annealing solver (2-opt, Or-opt, 2-opt* tail exchange, inter-route relocate/swap, Clarke-Wright warm start, parallel best-of-6 chains at 127k iterations/s) that beats Google OR-Tools by 3.2% on a 50-stop benchmark under the same 10-second budget, streaming live route convergence over WebSockets to a FastAPI + React/MapLibre GL map dashboard. (Python, FastAPI, React, MapLibre GL, WebSockets, OR-Tools) [Source: https://github.com/JIhushiru/anneal-routes]
 
-11. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
+11. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
 
-12. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+12. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
 
-13. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
+13. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+
+14. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
 
 ## Personal
 - Hobbies: Playing Valorant and Dota 2, jogging, appreciating nature

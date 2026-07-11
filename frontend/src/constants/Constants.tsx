@@ -161,6 +161,15 @@ export const projects = [
     screenshots: ['/screenshot_dp_dashboard.png', '/screenshot_dp_copilot.png', '/screenshot_dp_calibration.png'],
   },
   {
+    title: 'Anneal Routes: Vehicle Routing Optimizer (CVRPTW)',
+    description: 'Interactive vehicle-routing optimizer for Philippine delivery networks, built around a from-scratch simulated annealing solver (2-opt, Or-opt, 2-opt* tail exchange, inter-route relocate/swap, Clarke-Wright warm start, parallel best-of-6 chains at 127k iterations/s) that beats Google OR-Tools by 3.2% on a 50-stop benchmark under the same 10-second budget, streaming live route convergence over WebSockets to a FastAPI + React/MapLibre GL map dashboard.',
+    tech: ['Python', 'FastAPI', 'React', 'MapLibre GL', 'WebSockets', 'OR-Tools'],
+    link: '',
+    source: 'https://github.com/JIhushiru/anneal-routes',
+    screenshots: ['/screenshot_ar_solver.png', '/screenshot_ar_solution.png', '/screenshot_ar_comparison.png'],
+    categories: ['research'],
+  },
+  {
     title: 'Predictive Maintenance for Industrial Equipment',
     description: 'End-to-end project predicting Remaining Useful Life (RUL) of machinery using time series sensor data. Built a full-stack ML pipeline with real-time visualization, batch predictions, and risk alerts.',
     tech: ['Time Series', 'Machine Learning', 'Streamlit', 'Scikit-learn'],
