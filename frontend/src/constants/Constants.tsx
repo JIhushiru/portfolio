@@ -153,7 +153,7 @@ export const projects = [
   // Source-only projects
   {
     title: 'DispatchPilot: AI Operations Intelligence for Last-Mile Delivery',
-    description: 'Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates — backed by a gradient-boosting model predicting late-delivery risk in real time (ROC-AUC 0.92) through a FastAPI + Next.js dashboard.',
+    description: 'Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates. A gradient-boosting model predicts late-delivery risk in real time (ROC-AUC 0.92), served through a FastAPI + Next.js dashboard.',
     tech: ['Next.js', 'FastAPI', 'Anthropic Claude', 'Scikit-learn', 'WebSockets', 'Docker'],
     categories: ['ai-ml'],
     link: 'https://dispatchpilot.vercel.app/',
