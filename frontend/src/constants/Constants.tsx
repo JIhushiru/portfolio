@@ -156,7 +156,7 @@ export const projects = [
     description: 'Simulates a Metro Manila courier fleet with live GPS tracking, real-time anomaly monitoring, and an LLM copilot (Anthropic tool-use agent) that investigates delays and drafts customer updates — backed by a gradient-boosting model predicting late-delivery risk in real time (ROC-AUC 0.92) through a FastAPI + Next.js dashboard.',
     tech: ['Next.js', 'FastAPI', 'Anthropic Claude', 'Scikit-learn', 'WebSockets', 'Docker'],
     categories: ['ai-ml'],
-    link: '',
+    link: 'https://dispatchpilot.vercel.app/',
     source: 'https://github.com/JIhushiru/dispatchpilot',
     screenshots: ['/screenshot_dp_dashboard.png', '/screenshot_dp_copilot.png', '/screenshot_dp_calibration.png'],
   },
