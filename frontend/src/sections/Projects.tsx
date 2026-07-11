@@ -12,6 +12,7 @@ type Project = {
   screenshot?: string;
   screenshots?: string[];
   noZoom?: boolean;
+  categories?: string[];
 };
 
 type Props = {
@@ -19,12 +20,14 @@ type Props = {
   projects: Project[];
 };
 
-type Filter = 'all' | 'live' | 'source';
+type Filter = 'all' | 'ai-ml' | 'full-stack' | 'research' | 'live';
 
 const filterDefs: { key: Filter; label: string }[] = [
   { key: 'all', label: 'All' },
+  { key: 'ai-ml', label: 'AI / ML' },
+  { key: 'full-stack', label: 'Full-Stack' },
+  { key: 'research', label: 'Optimization & Research' },
   { key: 'live', label: 'Live Demo' },
-  { key: 'source', label: 'Source Only' },
 ];
 
 function CardImage({ project, isDarkMode }: { project: Project; isDarkMode: boolean }) {
@@ -115,16 +118,14 @@ export default function Projects({ isDarkMode, projects }: Props) {
   const gridRef = useScrollReveal<HTMLDivElement>(0.05);
 
   const filterFn = (key: Filter) => (p: Project) => {
-    if (key === 'live') return p.link && p.link.trim() !== '';
-    if (key === 'source') return (!p.link || p.link.trim() === '') && p.source && p.source.trim() !== '';
-    return true;
+    if (key === 'all') return true;
+    if (key === 'live') return !!(p.link && p.link.trim() !== '');
+    return p.categories?.includes(key) ?? false;
   };
 
-  const counts: Record<Filter, number> = {
-    all: projects.length,
-    live: projects.filter(filterFn('live')).length,
-    source: projects.filter(filterFn('source')).length,
-  };
+  const counts = Object.fromEntries(
+    filterDefs.map((f) => [f.key, projects.filter(filterFn(f.key)).length])
+  ) as Record<Filter, number>;
 
   const filtered = projects.filter(filterFn(activeFilter));
 
@@ -141,7 +142,7 @@ export default function Projects({ isDarkMode, projects }: Props) {
             A selection of projects spanning machine learning, computer vision, and full-stack development.
           </p>
 
-          <div className="flex gap-2 mb-10">
+          <div className="flex flex-wrap gap-2 mb-10">
             {filterDefs.map((f) => (
               <button
                 key={f.key}
