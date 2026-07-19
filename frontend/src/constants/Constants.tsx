@@ -192,7 +192,7 @@ export const projects = [
     description: "Real-time interactive 2D GPU fluid simulation implementing Jos Stam's semi-Lagrangian Stable Fluids solver as a chain of fragment shader passes over half-float ping-pong framebuffers, built in raw WebGL2 with Vite, React, and TypeScript.",
     tech: ['WebGL2', 'GLSL', 'React', 'TypeScript', 'Vite'],
     categories: ['full-stack', 'research'],
-    link: '',
+    link: 'https://stable-fluids-one.vercel.app/',
     source: 'https://github.com/JIhushiru/stable-fluids',
     screenshot: '/screenshot_fluids.png',
   },

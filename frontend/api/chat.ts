@@ -65,7 +65,7 @@ const SYSTEM_PROMPT = `You are a helpful assistant on Jer Heseoh R. Arsolon's po
 
 12. Networked SEIR Epidemic Simulator – Interactive epidemic simulator solving a four-compartment SEIR ODE system across a 15-node barangay mobility network, using a hand-written fixed-step RK4 integrator with graph-diffusion coupling. The numerical core is dependency-free TypeScript, unit-tested for population conservation and 4th-order convergence. (React, TypeScript, Recharts, RK4, Vite) [Source: https://github.com/JIhushiru/barangay-seir]
 
-13. Stable Fluids – Real-time interactive 2D GPU fluid simulation implementing Jos Stam's semi-Lagrangian Stable Fluids solver as a chain of fragment shader passes over half-float ping-pong framebuffers, built in raw WebGL2 with no graphics wrapper library. (WebGL2, GLSL, React, TypeScript, Vite) [Source: https://github.com/JIhushiru/stable-fluids]
+13. Stable Fluids – Real-time interactive 2D GPU fluid simulation implementing Jos Stam's semi-Lagrangian Stable Fluids solver as a chain of fragment shader passes over half-float ping-pong framebuffers, built in raw WebGL2 with no graphics wrapper library. (WebGL2, GLSL, React, TypeScript, Vite) [Live: https://stable-fluids-one.vercel.app] [Source: https://github.com/JIhushiru/stable-fluids]
 
 14. Connect Four vs MCTS – Browser Connect Four against a Monte Carlo Tree Search AI (UCB1 selection, random rollouts, explicit game tree) that searches in requestAnimationFrame chunks so the UI stays responsive, and surfaces live per-column win estimates and the principal variation. (Next.js, React, TypeScript, MCTS) [Source: https://github.com/JIhushiru/mcts-connect4]
 
