@@ -61,13 +61,21 @@ const SYSTEM_PROMPT = `You are a helpful assistant on Jer Heseoh R. Arsolon's po
 
 10. Anneal Routes – Interactive vehicle-routing optimizer (CVRPTW) for Philippine delivery networks. From-scratch simulated annealing solver (2-opt, Or-opt, 2-opt* tail exchange, inter-route relocate/swap, Clarke-Wright warm start, parallel best-of-6 chains at 127k iterations/s) that beats Google OR-Tools by 3.2% on a 50-stop benchmark under the same 10-second budget, streaming live route convergence over WebSockets to a FastAPI + React/MapLibre GL map dashboard. (Python, FastAPI, React, MapLibre GL, WebSockets, OR-Tools) [Source: https://github.com/JIhushiru/anneal-routes]
 
-11. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
+11. Adaptive Traffic Signal Control – Reinforcement-learning controller for a simulated 4-way intersection. Compares DQN and tabular Q-learning against fixed-time and longest-queue heuristics on a custom Gymnasium environment; the converged DQN cuts average vehicle wait to ~8s vs ~14s for the fixed-time baseline on held-out rush traffic. Includes a dependency-free browser replay viewer. (Python, PyTorch, Gymnasium, DQN, NumPy) [Live: https://jihushiru.github.io/rl-traffic/] [Source: https://github.com/JIhushiru/rl-traffic]
 
-12. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
+12. Networked SEIR Epidemic Simulator – Interactive epidemic simulator solving a four-compartment SEIR ODE system across a 15-node barangay mobility network, using a hand-written fixed-step RK4 integrator with graph-diffusion coupling. The numerical core is dependency-free TypeScript, unit-tested for population conservation and 4th-order convergence. (React, TypeScript, Recharts, RK4, Vite) [Source: https://github.com/JIhushiru/barangay-seir]
 
-13. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+13. Stable Fluids – Real-time interactive 2D GPU fluid simulation implementing Jos Stam's semi-Lagrangian Stable Fluids solver as a chain of fragment shader passes over half-float ping-pong framebuffers, built in raw WebGL2 with no graphics wrapper library. (WebGL2, GLSL, React, TypeScript, Vite) [Source: https://github.com/JIhushiru/stable-fluids]
 
-14. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
+14. Connect Four vs MCTS – Browser Connect Four against a Monte Carlo Tree Search AI (UCB1 selection, random rollouts, explicit game tree) that searches in requestAnimationFrame chunks so the UI stays responsive, and surfaces live per-column win estimates and the principal variation. (Next.js, React, TypeScript, MCTS) [Source: https://github.com/JIhushiru/mcts-connect4]
+
+15. Predictive Maintenance for Industrial Equipment – Predicting Remaining Useful Life (RUL) of machinery from time series sensor data with real-time visualization and risk alerts. (Time Series, ML, Streamlit, Scikit-learn)
+
+16. Student Organization Management System – Database CRUD system for managing members, roles, payments, and reports. (Python, MariaDB)
+
+17. Harvesty – Farm-to-table e-commerce platform connecting farmers and consumers. (MongoDB, Express, React, Node.js)
+
+18. Study Time Optimizer – Applied steepest descent optimization for UPLB student study efficiency. (Python, Optimization)
 
 ## Personal
 - Hobbies: Playing Valorant and Dota 2, jogging, appreciating nature
